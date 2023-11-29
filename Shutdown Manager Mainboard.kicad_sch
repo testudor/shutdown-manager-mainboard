@@ -468,6 +468,45 @@
         )
       )
     )
+    (symbol "Device:R" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "R" (at 2.032 0 90)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "R" (at 0 0 90)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at -1.778 0 90)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "R res resistor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Resistor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "R_*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "R_0_1"
+        (rectangle (start -1.016 -2.54) (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "R_1_1"
+        (pin passive line (at 0 3.81 270) (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 0 -3.81 90) (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
     (symbol "Mechanical:MountingHole" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
       (property "Reference" "H" (at 0 5.08 0)
         (effects (font (size 1.27 1.27)))
@@ -975,8 +1014,14 @@
   (junction (at 263.525 37.465) (diameter 0) (color 0 0 0 0)
     (uuid 561b3e32-eaf4-4384-808c-7f78662ebf2f)
   )
+  (junction (at 52.705 57.15) (diameter 0) (color 0 0 0 0)
+    (uuid 5f247956-7117-4548-bc8a-fa70d8d4132e)
+  )
   (junction (at 263.525 82.55) (diameter 0) (color 0 0 0 0)
     (uuid bfba7f28-a8f1-43a2-9ced-b3308b33cd18)
+  )
+  (junction (at 52.705 46.355) (diameter 0) (color 0 0 0 0)
+    (uuid cef20439-ad6d-45a9-9951-4f6efa8ae5aa)
   )
 
   (no_connect (at 119.38 64.77) (uuid 06c094b5-a5a5-42c7-96a2-c9f25f3b4f2e))
@@ -991,9 +1036,13 @@
     (stroke (width 0) (type default))
     (uuid 02139712-702a-4caa-9d31-8f4a6fae5869)
   )
-  (wire (pts (xy 47.625 93.345) (xy 47.625 95.25))
+  (wire (pts (xy 35.56 95.885) (xy 35.56 97.79))
     (stroke (width 0) (type default))
     (uuid 035b025a-62a9-4359-ad61-2218e3c34b9c)
+  )
+  (wire (pts (xy 52.705 57.15) (xy 52.705 58.42))
+    (stroke (width 0) (type default))
+    (uuid 0df513ea-ba9c-414e-81b4-13c2bf70e985)
   )
   (wire (pts (xy 201.295 34.925) (xy 201.295 36.83))
     (stroke (width 0) (type default))
@@ -1007,7 +1056,7 @@
     (stroke (width 0) (type default))
     (uuid 20073851-5852-4a86-9db8-79edfa341026)
   )
-  (wire (pts (xy 47.625 75.565) (xy 47.625 77.47))
+  (wire (pts (xy 35.56 78.105) (xy 35.56 80.01))
     (stroke (width 0) (type default))
     (uuid 21059714-4e8d-4d98-9d96-3b0478f616c9)
   )
@@ -1035,6 +1084,10 @@
   (wire (pts (xy 229.235 37.465) (xy 231.14 37.465))
     (stroke (width 0) (type default))
     (uuid 2bae9a57-4c50-44c0-96f8-759d555b7279)
+  )
+  (wire (pts (xy 52.705 46.355) (xy 52.705 48.26))
+    (stroke (width 0) (type default))
+    (uuid 2d51e0ac-27ad-43f4-a1d5-2c4a4edd50c1)
   )
   (wire (pts (xy 229.235 90.17) (xy 229.235 92.075))
     (stroke (width 0) (type default))
@@ -1070,11 +1123,15 @@
     (stroke (width 0) (type default))
     (uuid 51acb9ed-0be7-4cbb-9cee-b32eb2da3f38)
   )
-  (polyline (pts (xy 31.115 103.505) (xy 97.79 103.505))
+  (polyline (pts (xy 19.05 103.505) (xy 97.79 103.505))
     (stroke (width 0) (type default))
     (uuid 5398545a-b632-4485-8c83-b7de3a9ef93b)
   )
 
+  (wire (pts (xy 44.45 57.15) (xy 52.705 57.15))
+    (stroke (width 0) (type default))
+    (uuid 561648f1-cfa7-4c85-b79b-826f546cdc42)
+  )
   (wire (pts (xy 114.3 104.775) (xy 112.395 104.775))
     (stroke (width 0) (type default))
     (uuid 5748f570-151c-4af4-8cf9-037e022dd5f8)
@@ -1110,15 +1167,27 @@
     (uuid 63f00923-c459-43cd-b745-6999dfccf5fc)
   )
 
+  (wire (pts (xy 48.26 54.61) (xy 33.655 54.61))
+    (stroke (width 0) (type default))
+    (uuid 67034b08-0c39-4ea2-a57d-9abd82fb2b1e)
+  )
   (wire (pts (xy 229.235 82.55) (xy 231.14 82.55))
     (stroke (width 0) (type default))
     (uuid 6c792ac1-0461-4689-9420-ec804c2453c1)
+  )
+  (wire (pts (xy 52.705 55.88) (xy 52.705 57.15))
+    (stroke (width 0) (type default))
+    (uuid 6daada5c-5d15-478b-8b85-143fdc92f673)
+  )
+  (wire (pts (xy 33.655 57.15) (xy 36.83 57.15))
+    (stroke (width 0) (type default))
+    (uuid 6f32944f-509b-4336-8a48-dd3b16de95b5)
   )
   (polyline (pts (xy 147.955 123.825) (xy 184.785 123.825))
     (stroke (width 0) (type default))
     (uuid 7069fc5b-870d-4fe8-82de-c88923474fcc)
   )
-  (polyline (pts (xy 31.115 19.685) (xy 31.115 103.505))
+  (polyline (pts (xy 19.05 19.685) (xy 19.05 103.505))
     (stroke (width 0) (type default))
     (uuid 73c9f451-4457-4d03-b8ea-ab2867d45be1)
   )
@@ -1139,18 +1208,17 @@
     (stroke (width 0) (type default))
     (uuid 8489927b-a991-4a41-bb4e-708c58c0f012)
   )
-  (polyline (pts (xy 97.79 19.685) (xy 31.115 19.685))
+  (wire (pts (xy 48.26 54.61) (xy 48.26 46.355))
+    (stroke (width 0) (type default))
+    (uuid 850f918d-2b35-4888-a44d-f2c4e1967079)
+  )
+  (polyline (pts (xy 97.79 19.685) (xy 19.05 19.685))
     (stroke (width 0) (type default))
     (uuid 8a6d2e42-13d4-424b-b954-7bd064660796)
   )
   (polyline (pts (xy 283.21 157.48) (xy 283.21 111.125))
     (stroke (width 0) (type default))
     (uuid 8b863829-445d-4636-af14-9193c4df400c)
-  )
-
-  (wire (pts (xy 48.26 53.34) (xy 48.26 50.8))
-    (stroke (width 0) (type default))
-    (uuid 8ba3c273-da95-4e5e-b682-1d6489a393d1)
   )
   (polyline (pts (xy 99.06 123.825) (xy 146.685 123.825))
     (stroke (width 0) (type default))
@@ -1195,6 +1263,10 @@
     (stroke (width 0) (type default))
     (uuid ad5832c7-bc90-4e79-8382-bd0c7d0074c0)
   )
+  (wire (pts (xy 52.705 43.815) (xy 52.705 46.355))
+    (stroke (width 0) (type default))
+    (uuid b763b6e5-12c5-494d-a6b5-8c678edcb672)
+  )
   (wire (pts (xy 189.865 34.925) (xy 189.865 36.83))
     (stroke (width 0) (type default))
     (uuid b825d57f-7f05-4844-8d03-a914e46f1c4b)
@@ -1222,7 +1294,7 @@
     (uuid c4302557-b448-490a-9c9d-b105c2894b7e)
   )
 
-  (wire (pts (xy 45.72 75.565) (xy 47.625 75.565))
+  (wire (pts (xy 33.655 78.105) (xy 35.56 78.105))
     (stroke (width 0) (type default))
     (uuid c66109ba-734a-4007-bf4e-debf1d3d229d)
   )
@@ -1239,6 +1311,10 @@
     (uuid d078eb67-31b6-427e-91a6-4c5be63ea345)
   )
 
+  (wire (pts (xy 48.26 46.355) (xy 52.705 46.355))
+    (stroke (width 0) (type default))
+    (uuid d32e79b6-dc94-45a2-870e-81544e0ccd57)
+  )
   (wire (pts (xy 263.525 82.55) (xy 263.525 80.645))
     (stroke (width 0) (type default))
     (uuid da27f62d-619f-45dc-aa6e-a2f3b12fab02)
@@ -1260,10 +1336,6 @@
     (stroke (width 0) (type default))
     (uuid e3c87de9-a982-4423-beef-999064ef8984)
   )
-  (wire (pts (xy 45.72 53.34) (xy 48.26 53.34))
-    (stroke (width 0) (type default))
-    (uuid e416d2c1-de34-469c-95e2-b8437de66b88)
-  )
   (polyline (pts (xy 147.955 87.63) (xy 184.785 87.63))
     (stroke (width 0) (type default))
     (uuid e528e167-ff94-455c-ac54-0fb70b1400ff)
@@ -1277,6 +1349,10 @@
     (uuid e797401c-64aa-4584-9b23-a5e90cb71231)
   )
 
+  (wire (pts (xy 52.705 57.15) (xy 55.245 57.15))
+    (stroke (width 0) (type default))
+    (uuid e9c60487-5ec7-42d5-b7f3-ef6ffcb1525e)
+  )
   (wire (pts (xy 147.32 34.29) (xy 147.32 26.035))
     (stroke (width 0) (type default))
     (uuid ec459e5b-c595-470e-a265-92332f2d8806)
@@ -1298,7 +1374,7 @@
     (uuid f272b3b1-8b5c-47d3-bfad-e5ce4df0fdd1)
   )
 
-  (wire (pts (xy 45.72 93.345) (xy 47.625 93.345))
+  (wire (pts (xy 33.655 95.885) (xy 35.56 95.885))
     (stroke (width 0) (type default))
     (uuid f689efb6-5d4e-47d1-bb0f-1ad32bbaf5f6)
   )
@@ -1307,7 +1383,7 @@
     (uuid fbe90886-6e51-4e2d-93dd-54a251ae8244)
   )
 
-  (rectangle (start 31.115 104.775) (end 97.79 123.825)
+  (rectangle (start 19.05 104.775) (end 97.79 123.825)
     (stroke (width 0) (type default))
     (fill (type none))
     (uuid c5dbd8b4-3b9c-4383-8a22-9d5e1c1aecb8)
@@ -1337,11 +1413,11 @@
     (effects (font (size 2.54 2.54)) (justify left bottom))
     (uuid 63d5509e-69a7-4c6d-96dd-fb9cea1d9190)
   )
-  (text "Power Flags" (at 33.655 111.125 0)
+  (text "Power Flags" (at 22.225 111.125 0)
     (effects (font (size 2.54 2.54)) (justify left bottom))
     (uuid 7ed24ccf-f109-4a4e-818e-289cd4ec7b52)
   )
-  (text "I/O Connectors" (at 34.29 26.035 0)
+  (text "I/O" (at 22.225 26.035 0)
     (effects (font (size 2.54 2.54)) (justify left bottom))
     (uuid f05e1976-a99b-4943-8698-389a95c5cf02)
   )
@@ -1353,24 +1429,31 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "NODE_SHUTDOWN_1" (shape input) (at 45.72 88.265 0) (fields_autoplaced)
+  (global_label "NODE_SHUTDOWN_1" (shape input) (at 33.655 90.805 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 05ba68db-aefe-488b-9543-936f4c4479af)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 65.3171 88.265 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 53.2521 90.805 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "L_OUT" (shape input) (at 45.72 40.64 0) (fields_autoplaced)
+  (global_label "NODE_HEARTBEAT_1" (shape input) (at 70.485 33.02 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 0e3178b6-1958-408c-bcc5-9062a9be51c8)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 90.1425 33.02 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "L_OUT" (shape input) (at 33.655 39.37 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 0e39d74a-6d98-4f4d-9498-6a18d224b70b)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 54.2501 40.64 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 42.1851 39.37 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "NODE_HEARTBEAT_2" (shape input) (at 45.72 73.025 0) (fields_autoplaced)
+  (global_label "NODE_HEARTBEAT_2" (shape input) (at 33.655 75.565 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 16dee256-6863-490a-afdb-fa0e6eee7a72)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 65.3775 73.025 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 53.3125 75.565 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -1409,13 +1492,6 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "POW_SW_1" (shape input) (at 45.72 55.88 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid 3bf80413-7b69-4a81-b3c0-7e9b53955ac8)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 58.4833 55.88 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
   (global_label "RELAY_DIR" (shape input) (at 261.62 87.63 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 4963b57d-94dc-4215-9dbe-25961e4bc5ac)
@@ -1423,10 +1499,10 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "POW_LED_2" (shape input) (at 45.72 60.96 0) (fields_autoplaced)
+  (global_label "POW_LED_2" (shape input) (at 33.655 62.23 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 4c51548f-45a6-4d5e-bf75-0ef06cfbc4b6)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 59.2695 60.96 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 47.2045 62.23 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -1437,10 +1513,10 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "NODE_SHUTDOWN_2" (shape input) (at 45.72 70.485 0) (fields_autoplaced)
+  (global_label "NODE_SHUTDOWN_2" (shape input) (at 33.655 73.025 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 750f7e6e-4e0a-4683-88ac-efb0e650a40a)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 65.3171 70.485 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 53.2521 73.025 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -1451,10 +1527,17 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "NODE_HEARTBEAT_1" (shape input) (at 45.72 90.805 0) (fields_autoplaced)
+  (global_label "NODE_HEARTBEAT_1" (shape input) (at 33.655 93.345 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 7cc6f630-2f6a-4dea-96ed-1aab3f4fe8c7)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 65.3775 90.805 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 53.3125 93.345 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "POW_SW_1" (shape input) (at 55.245 57.15 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 913ed865-e20c-4aad-a5d7-910cbcee3b0d)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 68.0083 57.15 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -1469,6 +1552,13 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid bbf2b66e-2cef-4c37-85c9-694ad0c65ba2)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 280.5519 45.085 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "NODE_HEARTBEAT_2" (shape input) (at 70.485 39.37 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid c02baadd-5c26-48d3-ab44-8f3be247f45a)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 90.1425 39.37 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -1521,10 +1611,10 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "POW_LED_1" (shape input) (at 45.72 58.42 0) (fields_autoplaced)
+  (global_label "POW_LED_1" (shape input) (at 33.655 59.69 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid f60e387e-14e0-4b69-aff9-b960ff033887)
-    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 59.2695 58.42 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 47.2045 59.69 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
@@ -1560,9 +1650,38 @@
     )
     (pin "1" (uuid 163be30f-b7b8-40f7-8297-393851a7e915))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR04") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 66.675 39.37 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 039e172d-4965-468c-9873-aeec2165b964)
+    (property "Reference" "R4" (at 65.405 37.465 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "1k" (at 69.215 37.465 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 66.675 37.592 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 66.675 39.37 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "MPN" "C11702" (at 66.675 39.37 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid c71e5884-0ba8-440a-8f3b-a87cbc242683))
+    (pin "2" (uuid 0b1d4a73-5ce6-4f55-a738-b5f268406a35))
+    (instances
+      (project "Shutdown Manager Mainboard"
+        (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
+          (reference "R4") (unit 1)
         )
       )
     )
@@ -1585,7 +1704,7 @@
     )
     (pin "1" (uuid 8aa6afde-2abc-4b29-8ecf-b5d2307f8f21))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR018") (unit 1)
         )
@@ -1610,7 +1729,7 @@
     )
     (pin "1" (uuid 8d6c276a-7735-4119-9fc4-6f4fd8710e51))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR011") (unit 1)
         )
@@ -1618,24 +1737,24 @@
     )
   )
 
-  (symbol (lib_id "power:NEUT") (at 78.74 114.3 180) (unit 1)
+  (symbol (lib_id "power:NEUT") (at 67.31 114.3 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 11f5bcd2-3c60-4be7-9c18-2bffc6c2ffd7)
-    (property "Reference" "#PWR040" (at 78.74 110.49 0)
+    (property "Reference" "#PWR040" (at 67.31 110.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "NEUT" (at 78.74 119.38 0)
+    (property "Value" "NEUT" (at 67.31 119.38 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 78.74 114.3 0)
+    (property "Footprint" "" (at 67.31 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 78.74 114.3 0)
+    (property "Datasheet" "" (at 67.31 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid d420f985-cf38-47b6-bba9-73ef9ca7f0e1))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR040") (unit 1)
         )
@@ -1643,13 +1762,42 @@
     )
   )
 
+  (symbol (lib_id "Device:R") (at 40.64 57.15 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 12d51ec6-dcdf-44fa-ac26-98a05098a9e0)
+    (property "Reference" "R1" (at 38.735 55.245 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "10k" (at 42.545 55.245 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 40.64 58.928 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 40.64 57.15 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "MPN" "C25744" (at 40.64 57.15 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid aa8f4e27-8ff3-4127-b4d6-5e7794e98d71))
+    (pin "2" (uuid 7b37f2c4-40fe-40ae-ad3b-d06a7fea7015))
+    (instances
+      (project "Shutdown Manager Mainboard"
+        (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
+          (reference "R1") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Seeed_Studio_XIAO_Series:Seeed Studio XIAO SAMD21") (at 140.97 57.15 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid 16ca9d79-750f-4f47-b099-f99496728bc4)
-    (property "Reference" "U1" (at 145.4659 78.74 0)
+    (property "Reference" "U1" (at 155.575 78.105 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "Seeed Studio XIAO SAMD21" (at 145.4659 81.28 0)
+    (property "Value" "Seeed Studio XIAO SAMD21" (at 106.68 78.105 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Seeed Studio XIAO Series Library:XIAO-SAMD21-RP2040-14P-2.54-21X17.8MM (Seeeduino XIAO)" (at 132.08 52.07 0)
@@ -1679,7 +1827,7 @@
     (pin "8" (uuid 4dcf2921-dbdc-487b-8c0c-d68992bd08a6))
     (pin "9" (uuid a8b4f00c-be6c-4aee-83bd-bfdcafc03902))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "U1") (unit 1)
         )
@@ -1687,29 +1835,29 @@
     )
   )
 
-  (symbol (lib_id "Connector_Generic:Conn_01x03") (at 40.64 90.805 180) (unit 1)
+  (symbol (lib_id "Connector_Generic:Conn_01x03") (at 28.575 93.345 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1c2a7baa-63f1-44f1-91a9-caf962675a3e)
-    (property "Reference" "J3" (at 40.64 81.915 0)
+    (property "Reference" "J3" (at 28.575 84.455 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "Conn_01x03" (at 40.64 84.455 0)
+    (property "Value" "Conn_01x03" (at 28.575 86.995 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" (at 49.53 97.79 0)
+    (property "Footprint" "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" (at 37.465 100.33 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 40.64 90.805 0)
+    (property "Datasheet" "~" (at 28.575 93.345 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "MPN" "C722863" (at 40.64 90.805 0)
+    (property "MPN" "C722863" (at 28.575 93.345 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid c2055b6d-3cf6-4af4-8148-ff0aa6706fc4))
     (pin "2" (uuid 7615bab9-30a1-4ed4-9683-f3c16e386f6c))
     (pin "3" (uuid 4f97e8b6-b2ce-4a10-9af2-c55a4eebbc07))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "J3") (unit 1)
         )
@@ -1734,7 +1882,7 @@
     )
     (pin "1" (uuid a44761c0-d42a-4212-bff5-368364f322ad))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR036") (unit 1)
         )
@@ -1742,29 +1890,29 @@
     )
   )
 
-  (symbol (lib_id "Connector_Generic:Conn_01x03") (at 40.64 73.025 180) (unit 1)
+  (symbol (lib_id "Connector_Generic:Conn_01x03") (at 28.575 75.565 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1c8cf5fa-4cd5-4b69-a845-1e5078348a91)
-    (property "Reference" "J2" (at 40.64 64.135 0)
+    (property "Reference" "J2" (at 28.575 66.675 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "Conn_01x03" (at 40.64 66.675 0)
+    (property "Value" "Conn_01x03" (at 28.575 69.215 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" (at 49.53 80.01 0)
+    (property "Footprint" "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" (at 37.465 82.55 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 40.64 73.025 0)
+    (property "Datasheet" "~" (at 28.575 75.565 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "MPN" "C722863" (at 40.64 73.025 0)
+    (property "MPN" "C722863" (at 28.575 75.565 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f1e40694-064f-4913-bf27-d014dd729b7e))
-    (pin "2" (uuid fe53188a-eff9-4870-92d6-64d6a523865d))
-    (pin "3" (uuid ecfa93e2-8ce0-4a10-b481-93cbeedc65e7))
+    (pin "1" (uuid 50cdaf40-fb07-4cd2-98f1-20e1eb6a08fa))
+    (pin "2" (uuid 68dfb190-55df-4b1a-8287-7b5ee3e53564))
+    (pin "3" (uuid 19fe3318-2a91-4e10-9e22-0a4a6664d9c6))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "J2") (unit 1)
         )
@@ -1789,7 +1937,7 @@
     )
     (pin "1" (uuid 7dc86995-b190-4f68-8ad5-0b427a8c978c))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR020") (unit 1)
         )
@@ -1814,7 +1962,7 @@
     )
     (pin "1" (uuid a523d488-33ec-44fc-8ebb-0347b20e9ef9))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR015") (unit 1)
         )
@@ -1839,9 +1987,38 @@
     )
     (pin "1" (uuid 3d74187a-acbd-446c-95de-3cab39ec81af))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR027") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:C") (at 52.705 52.07 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 3784a8e6-6ac6-4a65-a250-f34b493b3732)
+    (property "Reference" "C7" (at 55.88 50.8 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "1uF" (at 55.88 53.34 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 53.6702 55.88 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 52.705 52.07 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "MPN" "C52923" (at 52.705 52.07 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid e8144290-c1a0-44a4-941e-95a47d27e09f))
+    (pin "2" (uuid 36ce6f39-f31f-42dd-baad-e48f3e789839))
+    (instances
+      (project "Shutdown Manager Mainboard"
+        (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
+          (reference "C7") (unit 1)
         )
       )
     )
@@ -1868,7 +2045,7 @@
     (pin "1" (uuid 353eb5e8-9c5f-4542-aa1b-3c13715c4d9a))
     (pin "2" (uuid b3e3a5f4-2ae4-4207-a169-d78c1015d64a))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "C4") (unit 1)
         )
@@ -1925,7 +2102,7 @@
     (pin "8" (uuid 486b2690-1594-4f0d-aec8-618b6b0ecbdc))
     (pin "9" (uuid 9e196662-ac19-4a16-a78c-c0a27271d6db))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "U3") (unit 1)
         )
@@ -1953,7 +2130,7 @@
     (pin "A1" (uuid 7f3f2275-c58d-4e48-8d18-27ec8a1250e3))
     (pin "A2" (uuid 89f43b84-531b-47ea-a3b9-00080f8fb17e))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "K1") (unit 1)
         )
@@ -1978,7 +2155,7 @@
     )
     (pin "1" (uuid aea9950b-48e2-4e75-aa93-b456e2a24702))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR016") (unit 1)
         )
@@ -1986,30 +2163,30 @@
     )
   )
 
-  (symbol (lib_id "Connector_Generic:Conn_01x04") (at 40.64 58.42 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+  (symbol (lib_id "Connector_Generic:Conn_01x04") (at 28.575 59.69 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid 46c8ca4d-8126-462b-9460-d1250e38071d)
-    (property "Reference" "J1" (at 40.64 47.625 0)
+    (property "Reference" "J1" (at 28.575 48.895 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "Conn_01x04" (at 40.64 50.165 0)
+    (property "Value" "Conn_01x04" (at 28.575 51.435 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" (at 40.64 58.42 0)
+    (property "Footprint" "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" (at 28.575 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 40.64 58.42 0)
+    (property "Datasheet" "~" (at 28.575 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "MPN" " C722867" (at 40.64 58.42 0)
+    (property "MPN" " C722867" (at 28.575 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid df67cbb1-364b-4bea-8173-4eace73f3efe))
-    (pin "2" (uuid c3cc666f-218d-4328-acfc-beebe4f2672f))
-    (pin "3" (uuid 1c675b2b-5f9f-4227-a34d-2bb2e6603197))
-    (pin "4" (uuid b86d848f-bf70-47fe-a31d-5e20004b5db9))
+    (pin "1" (uuid 397442a8-c37f-452e-a3d3-89bb85b7e38a))
+    (pin "2" (uuid ade18e1d-ec95-4956-ab87-781eb072ce63))
+    (pin "3" (uuid 09cc3b5e-5885-4212-b5bf-d06acb770349))
+    (pin "4" (uuid d105834c-2571-4edd-9865-b2609b72f184))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "J1") (unit 1)
         )
@@ -2017,24 +2194,24 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 47.625 95.25 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+  (symbol (lib_id "power:GND") (at 35.56 97.79 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
     (uuid 4f54ced0-9859-4b8a-8f98-b7c72dbbb880)
-    (property "Reference" "#PWR028" (at 47.625 101.6 0)
+    (property "Reference" "#PWR028" (at 35.56 104.14 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 47.625 100.33 0)
+    (property "Value" "GND" (at 35.56 101.6 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 47.625 95.25 0)
+    (property "Footprint" "" (at 35.56 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 47.625 95.25 0)
+    (property "Datasheet" "" (at 35.56 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid b0ad8698-84bc-4389-837d-00348d2e957f))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR028") (unit 1)
         )
@@ -2042,24 +2219,24 @@
     )
   )
 
-  (symbol (lib_id "power:PWR_FLAG") (at 67.945 114.3 0) (unit 1)
+  (symbol (lib_id "power:PWR_FLAG") (at 56.515 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 51e8b914-6de0-4dde-888b-916551ff6b68)
-    (property "Reference" "#FLG01" (at 67.945 112.395 0)
+    (property "Reference" "#FLG01" (at 56.515 112.395 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "PWR_FLAG" (at 67.945 109.855 0)
+    (property "Value" "PWR_FLAG" (at 56.515 109.855 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 67.945 114.3 0)
+    (property "Footprint" "" (at 56.515 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 67.945 114.3 0)
+    (property "Datasheet" "~" (at 56.515 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 6020702a-e573-4e81-b932-82cabb3d739f))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#FLG01") (unit 1)
         )
@@ -2083,7 +2260,7 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "H3") (unit 1)
         )
@@ -2108,7 +2285,7 @@
     )
     (pin "1" (uuid e2b6968c-27a5-4aa5-a06d-2a46d2aee525))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR07") (unit 1)
         )
@@ -2133,7 +2310,7 @@
     )
     (pin "1" (uuid bd07cdc6-aa41-4f67-9e7d-35bb04384438))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR032") (unit 1)
         )
@@ -2158,7 +2335,7 @@
     )
     (pin "1" (uuid 1b4f19dd-ede9-4fb7-9cf4-ee590d08b65d))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR010") (unit 1)
         )
@@ -2190,7 +2367,7 @@
     (pin "1" (uuid 0521a0e7-36ec-4b6b-8473-259e4fdd3edb))
     (pin "2" (uuid 3f52ed7d-048f-4ba4-b4d6-4c57710e5825))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "C1") (unit 1)
         )
@@ -2219,7 +2396,7 @@
     (pin "1" (uuid 9d842679-5c76-4626-bf94-03cacced0ed2))
     (pin "2" (uuid 8fa137ce-fcf6-4cdc-973d-080271ec5d32))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "C5") (unit 1)
         )
@@ -2244,7 +2421,7 @@
     )
     (pin "1" (uuid bf101570-74c8-491d-8671-d46392d9104d))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR08") (unit 1)
         )
@@ -2252,24 +2429,24 @@
     )
   )
 
-  (symbol (lib_id "power:NEUT") (at 45.72 35.56 270) (unit 1)
+  (symbol (lib_id "power:NEUT") (at 33.655 34.29 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 605801b4-a944-4a94-a525-7cf818984c50)
-    (property "Reference" "#PWR039" (at 41.91 35.56 0)
+    (property "Reference" "#PWR039" (at 29.845 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "NEUT" (at 49.53 35.56 90)
+    (property "Value" "NEUT" (at 37.465 34.29 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 45.72 35.56 0)
+    (property "Footprint" "" (at 33.655 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 45.72 35.56 0)
+    (property "Datasheet" "" (at 33.655 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 7b841b26-c8aa-48d8-9bc8-91d2022b7404))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR039") (unit 1)
         )
@@ -2294,7 +2471,7 @@
     )
     (pin "1" (uuid 0dfa3551-748c-4b13-8838-502d6b315640))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR05") (unit 1)
         )
@@ -2318,7 +2495,7 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "H2") (unit 1)
         )
@@ -2343,9 +2520,84 @@
     )
     (pin "1" (uuid 96910809-6dc8-41d1-9017-29647b5a51c1))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR024") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 62.865 33.02 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 70fc7d42-39cc-4d1f-ad2f-8fd38763e026)
+    (property "Reference" "#PWR030" (at 56.515 33.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 60.96 36.195 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 62.865 33.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 62.865 33.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 0ba20e69-c568-4aef-996b-2f7f1984b807))
+    (instances
+      (project "Shutdown Manager Mainboard"
+        (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
+          (reference "#PWR030") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3.3V") (at 52.705 66.04 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 74aef0c0-5dc8-4e3d-b806-b05c5ff438ff)
+    (property "Reference" "#PWR029" (at 52.705 62.23 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 52.705 70.485 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 52.705 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 52.705 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 2cc50213-faf5-4e54-b0d6-6e75889ff54a))
+    (instances
+      (project "Shutdown Manager Mainboard"
+        (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
+          (reference "#PWR029") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 62.865 39.37 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 763a5f72-0f5c-4ea2-a882-720fe2675f06)
+    (property "Reference" "#PWR042" (at 56.515 39.37 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 60.96 42.545 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 62.865 39.37 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 62.865 39.37 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid b72afb3d-fb91-4080-9f98-8fed8fd8f715))
+    (instances
+      (project "Shutdown Manager Mainboard"
+        (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
+          (reference "#PWR042") (unit 1)
         )
       )
     )
@@ -2375,7 +2627,7 @@
     (pin "4" (uuid a37d3c00-d4ea-4637-8f2b-3d3763ceca5e))
     (pin "5" (uuid ab5ae845-3269-450b-9b05-7f581b13c308))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "U2") (unit 1)
         )
@@ -2400,7 +2652,7 @@
     )
     (pin "1" (uuid e902cb34-8caf-4b38-9f8c-182a9210cfdd))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR025") (unit 1)
         )
@@ -2429,7 +2681,7 @@
     (pin "1" (uuid 1e0232d8-ef64-48ec-aa16-3c5a679e2d47))
     (pin "2" (uuid a78dea9d-6ed1-4718-baeb-844e6b1b5b86))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "C6") (unit 1)
         )
@@ -2454,9 +2706,34 @@
     )
     (pin "1" (uuid 7037e928-453e-4520-9e92-cb727dba34ac))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR031") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 52.705 43.815 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 821d79f7-408f-4c5b-ad3d-db57f4f50ab1)
+    (property "Reference" "#PWR03" (at 52.705 37.465 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 49.53 41.91 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 52.705 43.815 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 52.705 43.815 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 2907e560-d19d-43f3-bdff-347336fb53eb))
+    (instances
+      (project "Shutdown Manager Mainboard"
+        (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
+          (reference "#PWR03") (unit 1)
         )
       )
     )
@@ -2479,7 +2756,7 @@
     )
     (pin "1" (uuid d7d604c8-90f2-455f-b02d-cc051b7754e6))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR034") (unit 1)
         )
@@ -2503,9 +2780,38 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "H4") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 52.705 62.23 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 86220110-c13d-451c-bfb7-167cfefebcdf)
+    (property "Reference" "R3" (at 50.8 63.5 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "1k" (at 50.8 59.69 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 50.927 62.23 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 52.705 62.23 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "MPN" "C11702" (at 52.705 62.23 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 46c4c50e-397c-4a22-a2a1-75976f2b4a39))
+    (pin "2" (uuid d5a4bc03-79c9-430c-8782-a5c887134704))
+    (instances
+      (project "Shutdown Manager Mainboard"
+        (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
+          (reference "R3") (unit 1)
         )
       )
     )
@@ -2528,7 +2834,7 @@
     )
     (pin "1" (uuid 06a764ba-3574-49c8-9529-c065415004fc))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR026") (unit 1)
         )
@@ -2553,7 +2859,7 @@
     )
     (pin "1" (uuid dfc4e516-9406-414c-93cd-06ab4252c5a4))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR02") (unit 1)
         )
@@ -2582,7 +2888,7 @@
     (pin "1" (uuid dc081cb3-ef69-46e6-83bf-6756e8eeb4ec))
     (pin "2" (uuid 532ed7b1-32e5-4105-b37d-1db2eef46968))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "C3") (unit 1)
         )
@@ -2607,7 +2913,7 @@
     )
     (pin "1" (uuid 78a5d6ff-71d6-449a-b63c-931fa0128e7b))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR022") (unit 1)
         )
@@ -2615,24 +2921,24 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 47.625 77.47 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 35.56 80.01 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8db7133f-aacd-40af-b587-afcd48e77f71)
-    (property "Reference" "#PWR01" (at 47.625 83.82 0)
+    (property "Reference" "#PWR01" (at 35.56 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 47.625 82.55 0)
+    (property "Value" "GND" (at 35.56 85.09 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 47.625 77.47 0)
+    (property "Footprint" "" (at 35.56 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 47.625 77.47 0)
+    (property "Datasheet" "" (at 35.56 80.01 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid c4e2464b-a2e1-4d92-9dce-d881bc9feae1))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR01") (unit 1)
         )
@@ -2657,7 +2963,7 @@
     )
     (pin "1" (uuid dd3ed3b8-f8d2-45af-9308-2e12ddd92748))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR014") (unit 1)
         )
@@ -2665,51 +2971,26 @@
     )
   )
 
-  (symbol (lib_id "power:PWR_FLAG") (at 78.74 114.3 0) (unit 1)
+  (symbol (lib_id "power:PWR_FLAG") (at 67.31 114.3 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a79c278b-a847-4288-8db6-6759ffc69d15)
-    (property "Reference" "#FLG02" (at 78.74 112.395 0)
+    (property "Reference" "#FLG02" (at 67.31 112.395 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "PWR_FLAG" (at 78.74 109.855 0)
+    (property "Value" "PWR_FLAG" (at 67.31 109.855 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 78.74 114.3 0)
+    (property "Footprint" "" (at 67.31 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 78.74 114.3 0)
+    (property "Datasheet" "~" (at 67.31 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid b1253d71-47c4-417c-800c-15ddd6a57da7))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#FLG02") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3.3V") (at 48.26 50.8 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid a972b1d8-b0f3-4842-ab08-86bb74a86397)
-    (property "Reference" "#PWR030" (at 48.26 54.61 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 48.26 45.72 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 48.26 50.8 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 48.26 50.8 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 1bba457c-6d31-46b3-b67e-342758f614e7))
-    (instances
-      (project "Shutdown Manager"
-        (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
-          (reference "#PWR030") (unit 1)
         )
       )
     )
@@ -2732,7 +3013,7 @@
     )
     (pin "1" (uuid 40928a0a-f5ce-4d4e-b54f-8bd89a45d4ed))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR021") (unit 1)
         )
@@ -2764,7 +3045,7 @@
     (pin "1" (uuid e55ca170-59bd-4c66-acb5-1c54f66a56ce))
     (pin "2" (uuid 2edc00a4-8150-485c-b0ea-e720f805c90e))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "C2") (unit 1)
         )
@@ -2772,24 +3053,24 @@
     )
   )
 
-  (symbol (lib_id "power:LINE") (at 45.72 38.1 270) (unit 1)
+  (symbol (lib_id "power:LINE") (at 33.655 36.83 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid af5c52f9-0b7d-4151-9d21-69ab43ffcad3)
-    (property "Reference" "#PWR038" (at 41.91 38.1 0)
+    (property "Reference" "#PWR038" (at 29.845 36.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "LINE" (at 49.53 38.1 90)
+    (property "Value" "LINE" (at 37.465 36.83 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (at 45.72 38.1 0)
+    (property "Footprint" "" (at 33.655 36.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 45.72 38.1 0)
+    (property "Datasheet" "" (at 33.655 36.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 4d1bbf02-8e1d-43d8-9179-2b50e60ab329))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR038") (unit 1)
         )
@@ -2846,7 +3127,7 @@
     (pin "8" (uuid 170a2eea-b55b-41c0-a50f-a5119e5cd5b4))
     (pin "9" (uuid 5b8dce1e-3a77-44c1-aaad-21f295c3ba97))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "U4") (unit 1)
         )
@@ -2874,7 +3155,7 @@
     (pin "3" (uuid e2691fab-c396-46f2-8d3d-b77e79819136))
     (pin "4" (uuid 7fec4eee-5a56-40e8-921c-7d295739aadc))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "PS1") (unit 1)
         )
@@ -2898,7 +3179,7 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "H1") (unit 1)
         )
@@ -2923,7 +3204,7 @@
     )
     (pin "1" (uuid 5f59fd71-dd40-4963-9a44-79e5cf527f5e))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR012") (unit 1)
         )
@@ -2948,7 +3229,7 @@
     )
     (pin "1" (uuid 7a064ff0-1a3f-48af-8364-1bdd1af2e043))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR09") (unit 1)
         )
@@ -2973,7 +3254,7 @@
     )
     (pin "1" (uuid 3b659f9a-2bf4-4419-b788-9d6ea4d7e87a))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR013") (unit 1)
         )
@@ -2981,31 +3262,60 @@
     )
   )
 
-  (symbol (lib_id "Connector_Generic:Conn_01x03") (at 40.64 38.1 180) (unit 1)
+  (symbol (lib_id "Connector_Generic:Conn_01x03") (at 28.575 36.83 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c97aef42-3bdc-4be3-9d7b-aec7bad4a2c8)
-    (property "Reference" "J6" (at 40.64 29.21 0)
+    (property "Reference" "J6" (at 28.575 27.94 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "Conn_01x03" (at 40.64 31.75 0)
+    (property "Value" "Conn_01x03" (at 28.575 30.48 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Custom_Connectors:282844-3" (at 49.53 45.085 0)
+    (property "Footprint" "Custom_Connectors:282844-3" (at 37.465 43.815 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 40.64 38.1 0)
+    (property "Datasheet" "~" (at 28.575 36.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "MPN" "C591951" (at 40.64 38.1 0)
+    (property "MPN" "C591951" (at 28.575 36.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid b216ad69-7567-40a7-8b13-015b7006074e))
     (pin "2" (uuid 721c0080-0a62-44e4-b594-723f49282591))
     (pin "3" (uuid 3926c3d6-d452-401d-9016-e424c057c7f1))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "J6") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 66.675 33.02 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid d04fb11a-88d8-4c72-8c56-b35addc92772)
+    (property "Reference" "R2" (at 65.405 31.115 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Value" "1k" (at 69.215 31.115 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 66.675 31.242 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 66.675 33.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "MPN" "C11702" (at 66.675 33.02 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 73dab32d-3534-4862-b5d6-392a25dda844))
+    (pin "2" (uuid 467496cc-4542-4bb8-91e1-9466ed00032c))
+    (instances
+      (project "Shutdown Manager Mainboard"
+        (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
+          (reference "R2") (unit 1)
         )
       )
     )
@@ -3028,7 +3338,7 @@
     )
     (pin "1" (uuid ef31d844-5ba0-4194-8ef5-2ef341fe0307))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR017") (unit 1)
         )
@@ -3053,7 +3363,7 @@
     )
     (pin "1" (uuid bddcdef0-536f-4f16-8dd0-5162b3f8aa25))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR023") (unit 1)
         )
@@ -3078,7 +3388,7 @@
     )
     (pin "1" (uuid 880666e0-6c5f-4999-98a7-9be5352296d9))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR035") (unit 1)
         )
@@ -3103,7 +3413,7 @@
     )
     (pin "1" (uuid 8cf82209-e5ce-4623-b728-cbdb4f37df8e))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR037") (unit 1)
         )
@@ -3111,24 +3421,24 @@
     )
   )
 
-  (symbol (lib_id "power:LINE") (at 67.945 114.3 180) (unit 1)
+  (symbol (lib_id "power:LINE") (at 56.515 114.3 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e0ab32c9-34a7-4184-948e-e2318c03ab94)
-    (property "Reference" "#PWR041" (at 67.945 110.49 0)
+    (property "Reference" "#PWR041" (at 56.515 110.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "LINE" (at 67.945 119.38 0)
+    (property "Value" "LINE" (at 56.515 119.38 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 67.945 114.3 0)
+    (property "Footprint" "" (at 56.515 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 67.945 114.3 0)
+    (property "Datasheet" "" (at 56.515 114.3 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 61821328-33d9-4eef-8d49-dd817a85e400))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR041") (unit 1)
         )
@@ -3153,7 +3463,7 @@
     )
     (pin "1" (uuid b6d04a69-4a1c-40c8-ab37-019e5c7033c2))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR033") (unit 1)
         )
@@ -3178,7 +3488,7 @@
     )
     (pin "1" (uuid d8de3ee2-8825-4bde-aef9-d563c1c1da2a))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR019") (unit 1)
         )
@@ -3203,7 +3513,7 @@
     )
     (pin "1" (uuid f946f918-1230-43b7-a19a-686d71d82156))
     (instances
-      (project "Shutdown Manager"
+      (project "Shutdown Manager Mainboard"
         (path "/5ffe2da4-c419-4460-adb9-fafe2861d877"
           (reference "#PWR06") (unit 1)
         )

@@ -467,7 +467,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "Shutdown Manager.step",
+      "step": "Shutdown Manager Mainboard.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
